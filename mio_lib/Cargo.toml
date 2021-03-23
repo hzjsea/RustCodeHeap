@@ -1,0 +1,14 @@
+[package]
+name = "mio_lib"
+version = "0.1.0"
+authors = ["hzjsea <hzjsea@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mio = {version = "0.7", features = ["os-poll","net"]}
+
+
+[definitions.custom]
+forFunc = {version="0.1", path = "forFunc"};
