@@ -20,8 +20,12 @@ fn main() {
     println!("{:?}",path);
     
     // 拼接地址
-    let mut  path = std::path::Path::from("./xx.txt");
-    path.push("xx");
-    println!("{:?}",path);
+    let mut  path = std::path::PathBuf::new();
+    path.push(r"C:\");
+    path.push("windows");
+    path.push("system32");
+    
+    path.set_extension("dll");
+    assert_eq!(r"C:\\/windows\system32.dll",path.as_path().as_os_str());
 }
 
