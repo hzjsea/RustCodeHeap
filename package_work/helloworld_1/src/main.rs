@@ -1,15 +1,16 @@
-use crate::say::hi;
-
 fn main() {
     // 相对路径
     say::hello();
-    // 绝对路径调用
+    // 绝对路径调用 // src即为根目录
     crate::say::hello();
 
-    // 不使用 use
+    // 无法调用
+    // say::hello_2(); // error , because it's not public
+
     say::hi::hi_1();
     say::hi::hi_2();
     // 使用 use 后就可以这么调用
+    use crate::say::hi;
     hi::hi_1();
 
     // 重导出名称
@@ -40,22 +41,23 @@ mod say {
 }
 
 pub mod people {
-    // 重导出名称
+    // 调用pub的就用pub声明 
     pub use crate::say::hi;
+    // 调用不是pub的就不能用pub声明
     use crate::say;
     pub fn hello() {
         say::hello();
     }
     pub mod info {
         pub fn name() {
-            println!("zhangsang");
+            println!("hzjsea");
         }
     }
 }
 
 
 mod people_2 {
-    // 重导出名称
+    // 调用局部 self 代指 people mod下面的所有方法，而非指所有方法
     pub use crate::people::{self, info};
     pub fn hello() {
         info::name();
