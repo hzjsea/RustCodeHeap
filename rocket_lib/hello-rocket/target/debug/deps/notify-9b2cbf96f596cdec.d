@@ -1,0 +1,10 @@
+/root/rusttttt/RustCodeHeap/rocket_lib/hello-rocket/target/debug/deps/notify-9b2cbf96f596cdec.rmeta: /root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/lib.rs /root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/inotify.rs /root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/null.rs /root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/poll.rs /root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/debounce/mod.rs /root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/debounce/timer.rs
+
+/root/rusttttt/RustCodeHeap/rocket_lib/hello-rocket/target/debug/deps/notify-9b2cbf96f596cdec.d: /root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/lib.rs /root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/inotify.rs /root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/null.rs /root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/poll.rs /root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/debounce/mod.rs /root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/debounce/timer.rs
+
+/root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/lib.rs:
+/root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/inotify.rs:
+/root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/null.rs:
+/root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/poll.rs:
+/root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/debounce/mod.rs:
+/root/.cargo/registry/src/mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd/notify-4.0.15/src/debounce/timer.rs:

@@ -42,7 +42,7 @@ fn hello(name: String, age: u8, cool: bool) -> String {
 
 
 // Multiple Segments#
-use std::{cell::UnsafeCell, hash, iter::successors, ops::Deref, os::macos::raw::stat, path::PathBuf};
+use std::{cell::UnsafeCell, hash, iter::successors, ops::Deref,  path::PathBuf};
 #[get("/user/path/<path..>")]
 fn mult_path(path: PathBuf) -> String{
     format!("{:?}",path.as_os_str())
@@ -311,68 +311,17 @@ fn auth_data(checkbody:jjson<CheckBody>) -> String{
     format!("{}",result)
 }
 
-use diesel::mysql::MysqlConnection;
-use r2d2;
-use r2d2_diesel::ConnectionManager;
-use rocket::request::{FromRequest};
-use diesel::Queryable;
-
-type Pool = r2d2::Pool<ConnectionManager<MysqlConnection>>;
-
-fn connect_mysql() -> Pool{
-    let db_url = "mysql://hzj:upyun123@10.0.6.55:3306/test"; 
-    let manage = ConnectionManager::<MysqlConnection>::new(db_url);
-    r2d2::Pool::new(manage).expect("err mysql connect ")
-}
-
-pub struct Conn(pub r2d2::PooledConnection<ConnectionManager<MysqlConnection>>);
-
-impl<'a, 'r> FromRequest<'a, 'r> for Conn {
-    type Error = ();
-
-    fn from_request(request: &'a Request<'r>) -> rocket::request::Outcome<Conn, ()> {
-        let pool = request.guard::<rocket::State<Pool>>()?;
-        match pool.get() {
-            Ok(conn) => rocket::request::Outcome::Success(Conn(conn)),
-            Err(_) => rocket::request::Outcome::Failure((Status::ServiceUnavailable, ())),
-        }
-    }
-}
-
-impl Deref for Conn {
-    type Target = MysqlConnection;
-
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-
-#[derive(Serialize, Deserialize, Queryable)]
-struct UserTest {
-    id: i32,
-    name: String,
-    age:i32,
-}
+pub mod models;
+pub mod routes;
+pub mod schema;
 
 
-impl User {
-    fn get_all_users(conn: &MysqlConnection) -> Vec<User> {
-        
-    }
-}
-
-
-
-
-
+        // .mount("/file",routes![create_file]);
 fn main() {
     // rocket::ignite().mount("/", routes![pong]).launch();
     let rocket  = rocket::ignite()
         .mount("/",routes![pong,index,echo,auth_data])
-        .mount("/api/func", routes![user_echo])
-        .mount("/dynamic_path/", routes![mult_path,echo_name])
-        // .mount("/file",routes![create_file]);
+        //.mount("/",routes![routes::user_get_all]
         .mount("/api/userid/", routes![user,user_int,user_str])
         .mount("/api/query/", routes![hello_quert_map,item_get])
         .mount("/api/auth/", routes![auth])
@@ -382,7 +331,6 @@ fn main() {
             get_str,
             just_fail,
             person,
-            task])
-        ;
+            task]);
     rocket.launch();
 }
