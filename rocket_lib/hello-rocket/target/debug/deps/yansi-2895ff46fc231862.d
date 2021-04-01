@@ -1,0 +1,11 @@
+/Users/alpaca/gitProject/rustttttt/RustDemo/rocket_lib/hello-rocket/target/debug/deps/yansi-2895ff46fc231862.rmeta: /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/lib.rs /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/docify.rs /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/macros.rs /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/windows.rs /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/paint.rs /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/style.rs /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/color.rs
+
+/Users/alpaca/gitProject/rustttttt/RustDemo/rocket_lib/hello-rocket/target/debug/deps/yansi-2895ff46fc231862.d: /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/lib.rs /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/docify.rs /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/macros.rs /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/windows.rs /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/paint.rs /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/style.rs /Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/color.rs
+
+/Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/lib.rs:
+/Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/docify.rs:
+/Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/macros.rs:
+/Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/windows.rs:
+/Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/paint.rs:
+/Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/style.rs:
+/Users/alpaca/.cargo/registry/src/mirrors.ustc.edu.cn-61ef6e0cd06fb9b8/yansi-0.5.0/src/color.rs:
