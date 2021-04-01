@@ -2,17 +2,16 @@ use diesel::{self, associations::HasTable};
 use diesel::mysql::MysqlConnection;
 use diesel::prelude::*;
 
-use super::schema::users;
+use crate::schema;
+
+use super::schema::*;
 use super::schema::users::dsl::users as all_users;
 
 #[derive(Queryable,Serialize,Deserialize,Debug)]
 pub struct User {
     pub id: i32,
-    pub username: String,
-    pub password: String,
-    pub first_name: String,
-    pub sharesecret: String,
-    pub authenticator_source: String,
+    pub source_addr: String,
+    pub shared_secret: String,
 }
 
 
@@ -23,11 +22,10 @@ impl User{
             .load::<User>(conn)
             .expect("error")
     }
-    pub fn check_auth(authenticator_source: &str,conn: &MysqlConnection) -> Vec<User>{
+    pub fn check_auth(source_addr: &str,conn: &MysqlConnection) -> Vec<User>{
         all_users
-            .filter(users::authenticator_source.eq_all(authenticator_source))
+            .filter(schema::users::Source_Addr.eq_all(source_addr))
             .load::<User>(conn)
             .expect("error")
-        
     }
 }

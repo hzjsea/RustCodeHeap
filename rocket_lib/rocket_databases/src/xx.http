@@ -1,9 +1,10 @@
-@test_url = http://localhost:8000
+@test_url = http://localhost:9600
 @port = 8000
 @url = localhost
 
 ### 入口文件测试
-curl http://127.0.0.1:9999/
+curl http://127.0.0.1:9600
+
 
 
 ### rust 入口文件测试
@@ -36,7 +37,7 @@ Content-Type: application/x-www-form-urlencoded
 type=true&description="hzjsea"
 
 ### authen Action
-POST {{test_url}}/host/auth HTTP/1.1
+POST {{test_url}}/users/host/auth HTTP/1.1
 Content-Type: application/json
 
 {
@@ -48,16 +49,15 @@ Content-Type: application/json
       }
 }
 
+###
+POST {{test_url}}/users/host/auth HTTP/1.1
+Content-Type: application/json
 
-
-// curl Example
-
-// 设置cookie访问
-// -b/--cookie <name=string/file>    cookie字符串或文件读取位置
-// curl address -b name="hzjsea"
-// curl address --cookie name="hzjsea"
-
-// 设置账号密码 authorization
-// -u/--user <user[:password]>      设置服务器的用户和密码
-// curl address -u "admin:admin"
-// curl address --user "admin:admin"
+{
+    "action":"check_auth",
+    "data": {
+            "authenticator_source":"6ZT7n9vCm5LLEfgMpsHDbw==",
+            "timestamp":331155752
+     },
+     "source_addr":"OTAwMDAx"
+}
