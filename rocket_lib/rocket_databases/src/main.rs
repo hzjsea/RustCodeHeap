@@ -25,9 +25,9 @@ fn rocket() -> rocket::Rocket {
     // 加载目录中的
     // env::vars 只会加载系统的环境变量 ，但是dotenv.ok设置之后会在加载当前目录中.env中的环境变量的设置
     dotenv().ok();
-    for (index, value ) in env::vars(){
-        println!("{}{}",index,value)
-    }
+    // for (index, value ) in env::vars(){
+        // println!("{}{}",index,value)
+    // }
 
     // 读取环境变量
     let database_url = env::var("DATABASE_URL").expect("msg");
