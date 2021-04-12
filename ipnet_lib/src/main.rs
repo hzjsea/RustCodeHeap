@@ -108,8 +108,4 @@ fn main(){
     for i in hosts{
         println!("{:?}",&i)
     }
-    
-
-
-
 }
