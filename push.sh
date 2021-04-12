@@ -12,7 +12,7 @@ d_target(){
 d_push(){
 
 	git add .
-	git commit -am "push by shell"
+	git commit -am "rust project push by shell"
 	git push
 }
 

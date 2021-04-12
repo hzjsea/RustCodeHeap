@@ -1,4 +1,5 @@
 @test_url = http://localhost:9600
+@online_url = http:://10.0.6.43:9600
 @port = 8000
 @url = localhost
 
@@ -61,3 +62,17 @@ Content-Type: application/json
      },
      "source_addr":"OTAwMDAx"
 }
+
+###a
+POST {{online_url}}/users/host/auth HTTP/1.1
+Content-Type: application/json
+
+{
+    "action":"check_auth",
+    "data": {
+            "authenticator_source":"6ZT7n9vCm5LLEfgMpsHDbw==",
+            "timestamp":331155752
+     },
+     "source_addr":"OTAwMDAx"
+}
+
